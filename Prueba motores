@@ -1,0 +1,87 @@
+#define DIR_IZQ_A   12
+#define DIR_IZQ_B   7
+
+#define DIR_DER_B   9
+#define DIR_DER_A   8
+
+#define PWM_DER     10
+#define PWM_IZQ     11
+
+void setup() {
+ analogWrite(PWM_DER , 255);
+ analogWrite(PWM_IZQ , 255);
+
+ pinMode (DIR_IZQ_A , OUTPUT);
+ pinMode (DIR_IZQ_B , OUTPUT);
+
+ pinMode (DIR_DER_A , OUTPUT);
+ pinMode (DIR_DER_B , OUTPUT);
+
+}
+
+void loop() {
+
+adelante ();
+delay (1000);
+
+atras();
+delay (1000);
+
+derecha();
+delay (1000);
+
+izquierda ();
+delay (1000);
+
+frenado();
+delay (1000);
+
+}
+
+void adelante()
+{
+
+digitalWrite (DIR_IZQ_A , HIGH);
+digitalWrite (DIR_DER_A , HIGH);
+
+digitalWrite (DIR_IZQ_B , LOW);
+digitalWrite (DIR_DER_B , LOW);
+  
+}
+
+void atras()
+{
+
+digitalWrite (DIR_IZQ_A , LOW);
+digitalWrite (DIR_DER_A , LOW);
+
+digitalWrite (DIR_IZQ_B , HIGH);
+digitalWrite (DIR_DER_B , HIGH);
+}
+
+void derecha()
+{
+digitalWrite (DIR_IZQ_A , HIGH);
+digitalWrite (DIR_DER_A , LOW);
+
+digitalWrite (DIR_IZQ_B , LOW);
+digitalWrite (DIR_DER_B , HIGH);
+}
+
+void izquierda()
+{
+digitalWrite (DIR_IZQ_A , LOW);
+digitalWrite (DIR_DER_A , HIGH);
+
+digitalWrite (DIR_IZQ_B , HIGH);
+digitalWrite (DIR_DER_B , LOW);
+}
+
+void frenado ()
+{
+digitalWrite (DIR_IZQ_A , HIGH);
+digitalWrite (DIR_DER_A , HIGH);
+
+digitalWrite (DIR_IZQ_B , HIGH);
+digitalWrite (DIR_DER_B , HIGH);
+}
