@@ -1,6 +1,7 @@
 Jetson to Arduino
 - https://blog.rareschool.com/2019/05/five-steps-to-connect-jetson-nano-and.html
 - https://www.youtube.com/watch?v=405mZ5o4K-w
+- https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit#setup-headless
 
 La comunicación puede ser por el puerto Serie usando el cable o conectando los pines de comunicación (Ej: RX y TX)
 
